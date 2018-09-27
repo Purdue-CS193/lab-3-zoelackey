@@ -5,7 +5,8 @@ public class MathUtils {
      */
     public static double divideNumbers(int dividend, int divisor) {
         /* Do some casual division ... Super easy ... Shouldn't be any problems here */
-        double res = dividend / divisor;
+         double dividend2=(double)dividend;
+        double res = dividend2 / divisor;
         /* Return the DEFINITELY CORRECT result */
         return res;
     }
@@ -24,14 +25,14 @@ public class MathUtils {
             exp *= -1;
             isNegative = true;
         }
-
+        System.out.println(res);
         /* Multiply the result by the base exp times
             Ex: base = 2, exp = 2
                --> res = 2, then res = 4 */
-        for (int i = 0; i < exp; i++) {
+        for (int i = 1; i < exp; i++) {
            res *= base; 
         }
-
+        System.out.println(res);
         /* If it's a negative exponent, we should invert it! */
         if (isNegative) {
             double dividedRes = divideNumbers(1, res);
